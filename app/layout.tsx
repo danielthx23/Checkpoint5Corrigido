@@ -1,3 +1,5 @@
+import Footer from "@/components/footer/Footer";
+import Nav from "@/components/nav/Nav";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -24,11 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0`}
       >
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
