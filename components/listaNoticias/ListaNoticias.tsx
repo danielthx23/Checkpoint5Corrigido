@@ -58,7 +58,7 @@ const ListaNoticias = ({ perPage = 10 }: ListaNoticiasProps) => {
                 placeholder="Buscar artigos..."
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
-                className="mb-4 p-2 border rounded w-full"
+                className="mb-4 p-2 border rounded w-full text-black"
             />
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {displayedData.length > 0 ? (
