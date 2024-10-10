@@ -51,8 +51,8 @@ const ListaNoticias = ({ perPage = 10 }: ListaNoticiasProps) => {
     };
 
     return (
-        <main className="flex flex-col gap-4">
-            <h1 className="text-xl font-bold">Bem vindo!</h1>
+        <main className="flex flex-col gap-4 p-4">
+            <h1 className="text-xl font-bold text-center">Bem-vindo!</h1>
             <input
                 type="text"
                 placeholder="Buscar artigos..."
@@ -60,16 +60,16 @@ const ListaNoticias = ({ perPage = 10 }: ListaNoticiasProps) => {
                 onChange={(e) => setFilter(e.target.value)}
                 className="mb-4 p-2 border rounded w-full"
             />
-            <section className="grid grid-cols-3 gap-8">
+            <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {displayedData.length > 0 ? (
                     displayedData.map((noticia) => (
                         <CardNoticia key={noticia.id} Noticia={noticia} />
                     ))
                 ) : (
-                    <p className='text-gray-600'>Nenhum artigo encontrado</p>
+                    <p className="text-gray-600">Nenhum artigo encontrado</p>
                 )}
             </section>
-            <footer className='container mx-auto p-4 mt-8 text-center col-span-full'>
+            <footer className="container mx-auto p-4 mt-8 text-center">
                 {
                     hasMore && (
                         <button onClick={getData} className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}>
@@ -78,7 +78,7 @@ const ListaNoticias = ({ perPage = 10 }: ListaNoticiasProps) => {
                     )
                 }
                 {
-                    !hasMore && displayedData.length > 0 && <p className='text-gray-600'>Não há mais itens</p>
+                    !hasMore && displayedData.length > 0 && <p className="text-gray-600">Não há mais itens</p>
                 }
             </footer>
         </main>
