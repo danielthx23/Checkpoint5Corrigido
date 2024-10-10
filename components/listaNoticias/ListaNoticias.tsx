@@ -52,7 +52,7 @@ const ListaNoticias = ({ perPage = 10 }: ListaNoticiasProps) => {
 
     return (
         <main className="flex flex-col gap-4 p-4">
-            <h1 className="text-xl font-bold text-center">Bem-vindo!</h1>
+            <h1 className="text-xl font-bold">Bem-vindo!</h1>
             <input
                 type="text"
                 placeholder="Buscar artigos..."

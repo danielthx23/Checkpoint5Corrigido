@@ -26,7 +26,7 @@ const NoticiaDetalhes = ({ noticia }: NoticiaDetalhesProps) => {
                     </span>
                 ))}
             </div>
-            <h2 className="mt-8 text-2xl font-semibold">Comentários</h2>
+            <h2 className="mt-8 text-2xl font-semibold text-black">Comentários</h2>
             <div className="mt-4">
                 {noticia.Comentarios.length > 0 ? (
                     noticia.Comentarios.map((comentario) => (
