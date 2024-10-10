@@ -11,7 +11,7 @@ const CardNoticia = ({ Noticia }: CardNoticiaProps) => {
             <img src={Noticia.imagem} alt={Noticia.titulo} className="w-full h-48 object-cover" />
             <div className="p-4">
                 <h1 className="text-xl text-black font-bold mb-2">{Noticia.titulo}</h1>
-                <h2 className="line-clamp-2 text-gray-700 mb-4">{Noticia.conteudo}</h2>
+                <h2 className="line-clamp-1 text-gray-700 mb-4">{Noticia.conteudo}</h2>
                 <div className="flex flex-wrap space-x-2 mb-2 justify-between">
                     {Noticia.Categorias.map((categoria) => (
                         <span key={categoria} className="bg-gray-200 text-neutral-600 text-xs font-semibold py-1 px-2">
