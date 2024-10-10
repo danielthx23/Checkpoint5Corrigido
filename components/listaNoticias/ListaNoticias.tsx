@@ -10,7 +10,7 @@ interface ListaNoticiasProps {
 }
 
 const ListaNoticias = ({ perPage = 10 }: ListaNoticiasProps) => {
-    const [data, setData] = useState<Noticia[]>(Data);
+    const [data] = useState<Noticia[]>(Data);
     const [displayedData, setDisplayedData] = useState<Noticia[]>([]);
     const [page, setPage] = useState<number>(0);
     const [hasMore, setHasMore] = useState<boolean>(true);
